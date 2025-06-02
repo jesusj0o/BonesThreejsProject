@@ -36,7 +36,7 @@ export default function BoneInfoPanel({ boneName, onClose }) {
         fixed top-0 right-0 h-full w-[300px] bg-gray-100 p-5 shadow-lg rounded-2xl
         flex flex-col justify-between
         transform transition-all duration-500 ease-in-out
-        ${isAnimating ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}
+        ${isAnimating ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"} z-[60]
       `}
       style={{ willChange: "transform, opacity" }}
     >

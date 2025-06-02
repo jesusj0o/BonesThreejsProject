@@ -1,8 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { User, Heart, LogOut, Info } from "lucide-react";
 
-
-
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -21,17 +19,21 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="w-full h-16 bg-transparent flex items-center justify-end px-6 relative">
-      <div className="relative" ref={dropdownRef}>
+    <nav className="w-full h-16 bg-transparent flex items-center justify-end px-6">
+      <div className="relative flex items-center gap-3" ref={dropdownRef}>
+        <span className="text-gray-700 text-sm font-semibold">
+          Hola, Usuario!
+        </span>
+
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center hover:brightness-95 transition"
+          className="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center hover:brightness-95 transition relative z-10"
         >
           <User size={24} className="text-gray-700" />
         </button>
 
         {isOpen && (
-          <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50 py-2">
+          <div className="absolute top-full right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-20 py-2 border border-gray-200">
             <button className="w-full px-4 py-2 text-sm hover:bg-gray-100 flex items-center gap-2">
               <User className="w-4 h-4" />
               Mi perfil
