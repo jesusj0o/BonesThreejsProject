@@ -1,14 +1,14 @@
 import { useState } from "react";
 import {
-  ChevronFirst,
-  ChevronLast,
   Bone,
   Skull,
   Dumbbell,
   Heart,
   BicepsFlexedIcon,
   Brain,
-  Stethoscope
+  Stethoscope,
+  BookOpenText,
+  BookCheck
 } from "lucide-react";
 import DropMenu from "../utils/DropMenu"; 
 
@@ -31,13 +31,14 @@ const SideBar = () => {
         className={`
           transition-all duration-300
           ${isOpen ? "w-72 p-6" : "w-0 p-0"}
-          h-screen bg-white text-gray-800 box-border shadow-md
+          h-screen bg-[#063940] text-white box-border shadow-md
           rounded-tr-2xl rounded-br-2xl overflow-hidden
         `}
       >
         {isOpen && (
           <>
-            <h2 className="text-sky-800 mb-6 text-2xl text-center font-bold">Modelos 3D</h2>
+            <h2 className="text-white mb-3 text-2xl text-center font-bold">Anatomy 3D</h2>
+            <div className="border-t border-gray-300 mb-3 mx-3"></div>
    
             <ul className="space-y-3">
               <DropMenu
@@ -74,21 +75,19 @@ const SideBar = () => {
                 ]}
               />
             </ul>
+              <div className="border-t border-white mt-6 pt-4 px-2">
+              <button className="flex items-center gap-2 text-sm hover:text-[#4b99a3] transition mb-3">
+                <BookOpenText size={18} />
+                <span>Artículos médicos</span>
+              </button>
+              <button className="flex items-center gap-2 text-sm hover:text-[#4b99a3] transition">
+                <BookCheck size={18} />
+                <span>Recomendar libros de anatomía</span>
+              </button>
+            </div>
           </>
         )}
       </aside>
-
-      {/* toggle */}
-      <div className="flex items-center">
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="w-7 h-20 bg-white rounded-r-full flex items-center justify-center"
-        >
-          <span className="text-gray-600">
-            {isOpen ? <ChevronFirst /> : <ChevronLast />}
-          </span>
-        </button>
-      </div>
     </div>
   );
 };

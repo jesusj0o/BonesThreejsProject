@@ -44,7 +44,7 @@ export default function App() {
         <Navbar toggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
 
         <div className="flex-1 flex relative">
-          <div className="flex-1 flex items-center justify-center p-4 pr-[320px]">
+          <div className="flex-1 flex items-center justify-center p-1 pr-[320px]">
             <div className="w-full h-full max-w-[1440px] flex">
               <div className="flex-1 relative">
                 <ModelViewer

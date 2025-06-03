@@ -19,7 +19,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="w-full h-16 bg-transparent flex items-center justify-end px-6">
+    <nav className="w-full h-13 bg-transparent flex items-center justify-end px-6">
       <div className="relative flex items-center gap-3" ref={dropdownRef}>
         <span className="text-gray-700 text-sm font-semibold">
           Hola, Usuario!
@@ -27,7 +27,7 @@ export default function Navbar() {
 
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center hover:brightness-95 transition relative z-10"
+          className="w-12 h-12 mt-1 bg-gray-300 rounded-full flex items-center justify-center hover:brightness-95 transition relative z-10"
         >
           <User size={24} className="text-gray-700" />
         </button>
@@ -46,6 +46,8 @@ export default function Navbar() {
               <Heart className="w-4 h-4" />
               Donar
             </button>
+            <div className="border-t border-gray-300 mx-3"></div>
+
             <button className="w-full px-4 py-2 text-sm text-red-600 hover:bg-gray-100 flex items-center gap-2">
               <LogOut className="w-4 h-4" />
               Cerrar sesión

@@ -29,7 +29,7 @@ export default function LoadingOverlay({ progress = 0, onFinish }) {
         </button>
       )}
 
-      <div className="bg-sky-900 p-6 rounded-2xl max-w-xl w-full text-center space-y-4 shadow-md">
+      <div className="bg-[#195e63] p-6 rounded-xl max-w-xl w-full text-center space-y-4 shadow-md">
         <h2 className="text-3xl font-bold">Bienvenido @user a Medical3D</h2>
         <h2 className="text-2xl font-bold">¿Cómo interactuar con el modelo?</h2>
         <ul className="text-left list-disc list-inside space-y-2 text-sm sm:text-base font-semibold mt-4">
@@ -44,7 +44,7 @@ export default function LoadingOverlay({ progress = 0, onFinish }) {
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-full max-w-sm">
         <div className="w-full h-2 bg-gray-700 rounded-full overflow-hidden shadow">
           <div
-            className="h-full bg-gray-400 transition-all duration-300"
+            className="h-full bg-[#8ebdb6] transition-all duration-300"
             style={{ width: `${internalProgress}%` }}
           ></div>
         </div>
